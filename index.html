@@ -369,7 +369,7 @@
   <header>
     <div class="header-left">
       <button id="homeBtn" class="home-btn" onclick="showHome()">ホーム</button>
-      <div class="app-title">歴史 全154語</div>
+      <div class="app-title">公共 全154語</div>
     </div>
     <div class="mode-toggle">
       <button id="modeSelect" class="mode-btn active" onclick="setMode('select')">4択</button>
@@ -738,20 +738,20 @@ const quizData = [
     }
 
     function loadWrongQuestions() {
-      const saved = localStorage.getItem('history_quiz_wrong_157');
+      const saved = localStorage.getItem('public_quiz_wrong_157');
       if (saved) wrongQuestionsMap = JSON.parse(saved);
     }
 
     function saveWrongQuestions() {
-      localStorage.setItem('history_quiz_wrong_157', JSON.stringify(wrongQuestionsMap));
+      localStorage.setItem('public_quiz_wrong_157', JSON.stringify(wrongQuestionsMap));
     }
 
     function getProgress(chId) {
-      return localStorage.getItem(`history_quiz_prog_157_${chId}`) || 0;
+      return localStorage.getItem(`public_quiz_prog_157_${chId}`) || 0;
     }
 
     function saveProgress(chId, percent) {
-      localStorage.setItem(`history_quiz_prog_157_${chId}`, percent);
+      localStorage.setItem(`public_quiz_prog_157_${chId}`, percent);
     }
 
     function renderChapterList() {
